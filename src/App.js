@@ -19,31 +19,25 @@ const theme = createTheme({
   },
 });
 
-
-
-const playlist = [
-  { title: "Walking on Sunshine", artist: "Katrina & The Waves" },
-  { title: "Happy", artist: "Pharrell Williams" },
-  { title: "I Wanna Dance with Somebody", artist: "Whitney Houston" },
-  { title: "Good Vibrations", artist: "The Beach Boys" },
-  { title: "Uptown Funk", artist: "Mark Ronson ft. Bruno Mars" },
-  { title: "Can't Stop the Feeling!", artist: "Justin Timberlake" },
-  { title: "Shake It Off", artist: "Taylor Swift" },
-  { title: "Don't Stop Believin'", artist: "Journey" },
-  { title: "Dancing Queen", artist: "ABBA" },
-  { title: "I Got You (I Feel Good)", artist: "James Brown" }
-];
-
 function App() {
   const [inputMood, setInputMood] = useState("");
   const [submittedMood, setSubmittedMood] = useState("");
+  const [playlist, setPlaylist] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Add logic to send the mood to the backend and get a playlist
-    // For now, we'll just simulate this by setting the submitted mood
-    // and using the static playlist defined above.
-    setSubmittedMood(inputMood);
+    try {
+      const response = await fetch("http://localhost:3001/playlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mood: inputMood }),
+      });
+      const data = await response.json();
+      setSubmittedMood(data.mood);
+      setPlaylist(data.playlist); // Update playlist dynamically
+    } catch (error) {
+      console.error("Error fetching playlist:", error);
+    }
   };
 
   return (
