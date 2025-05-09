@@ -19,7 +19,7 @@
   "scripts": {
     "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
     "start-frontend": "react-scripts start",
-    "start-backend": "cd backend && venv/bin/python app.py",
+    "start-backend": "cd backend && .venv/bin/python app.py",
     "build": "npm run build-frontend && npm run build-backend",
     "build-frontend": "react-scripts build",
     "build-backend": "cd backend && python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt",
