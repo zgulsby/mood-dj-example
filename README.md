@@ -20,4 +20,4 @@ npm start
 
 ## How to look at GitHub Models
 
-Take a peek over at [the models tab](/models) and take a look at what models are available and start looking at some example code and how we can start using them. You can even start iterating with prompt building and see how the models respond.
+Take a peek over at **the models tab** and take a look at what models are available and start looking at some example code and how we can start using them. You can even start iterating with prompt building and see how the models respond.
