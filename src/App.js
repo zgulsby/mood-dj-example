@@ -44,7 +44,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm" style={{ marginTop: "2rem" }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          <LibraryMusicIcon color="primary" /> Mood Playlist Generator
+          <LibraryMusicIcon color="primary" /> Mood DJ
         </Typography>
         <form onSubmit={handleSubmit} style={{ marginBottom: "1.5rem" }}>
           <TextField
