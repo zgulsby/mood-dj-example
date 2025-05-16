@@ -6,7 +6,7 @@ If you are reading this you are hopefully enjoying the lovely [UPSCALE CONF 2025
 
 ## How to install dependencies
 
-Hopefully the codespace is setup correctly and we can run the follwing to install the dependencies
+Hopefully the codespace is setup correctly and we can run the following to install the dependencies
 
 ```bash
 npm run setup
