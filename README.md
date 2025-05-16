@@ -6,10 +6,10 @@ If you are reading this you are hopefully enjoying the lovely [UPSCALE CONF 2025
 
 ## How to install dependencies
 
-Hopefully the codespace is setup correctly, but sometimes the python environment doesn't get setup correctly. The easiest way to resolve this is to run the following command:
+Hopefully the codespace is setup correctly and we can run the follwing to install the dependencies
 
 ```bash
-npm run build-backend
+npm run setup
 ```
 
 ## How to run the server
